@@ -491,6 +491,92 @@ Access: PhysioNet (credentialed access)
 
 ***
 
+### Biomedical Knowledge Graphs, Triple Extraction & RDF Benchmarks
+
+These resources support construction, validation, and benchmarking of biomedical/clinical knowledge graphs (KGs). They include relation extraction / triple generation datasets, large integrated KGs, and RDF-specific benchmarks for SPARQL, reification, and semantic web evaluation.
+
+**Possible tasks these datasets can be used for:**
+- Relation / triple extraction from biomedical literature or clinical text
+- Knowledge graph construction and population (text → triples → RDF/OWL)
+- Link prediction and knowledge graph completion
+- KG-based question answering (KGQA)
+- RDF modeling comparisons (classic reification, Singleton Property, RDF-star)
+- SPARQL endpoint federation and triplestore performance benchmarking
+- Ontology alignment, hierarchical reasoning, and validation of extracted triples
+- Continual / temporal knowledge graph learning
+- Multi-LLM consensus validation of triples and clinical reasoning / RAG over KGs
+
+#### Triple Extraction / Relation Extraction Datasets
+__BioRED (and BioRED BioCreative VIII Track)__  
+Document-level multi-entity relation extraction corpus on PubMed abstracts (originally 600, expanded to 1,000). Covers gene/protein, disease, chemical, variant, species, cell line with multiple relation types (Association, Positive/Negative Correlation, Bind, Cotreatment, Comparison, Conversion, Drug Interaction, Negative Correlation, Positive Correlation) plus novelty labels (novel finding vs. background knowledge). Gold-standard for multi-type triple generation and validation.  
+Access: https://ftp.ncbi.nlm.nih.gov/pub/lu/BC8-BioRED-track/ and NCBI BioRED GitHub  
+
+***
+__ChemProt__  
+PubMed abstracts annotated for chemical–protein interactions (14–23 relation types). Classic triple extraction benchmark.  
+Access: BioCreative / shared task archives  
+
+***
+__DDI (Drug-Drug Interaction)__  
+DrugBank + Medline texts annotated for drug–drug interactions (4 relation types). Standard for pharmacological triple extraction.  
+Access: Shared task archives  
+
+***
+__ADE Corpus__  
+Case reports annotated for adverse drug events (drug–ADE pairs). Useful for clinical safety-related triples.  
+Access: Publicly available via original ADE papers / repositories  
+
+***
+__GIT (Biomedical Triple Extraction)__  
+Broader multi-relation dataset (~4.7k sentences, 22 relation types) for general biomedical triple extraction benchmarking.  
+
+***
+
+#### Integrated Biomedical Knowledge Graphs
+__PrimeKG (Precision Medicine Knowledge Graph)__  
+~129k nodes and 4M+ edges integrating 20 high-quality resources. Disease-centric with multimodal clinical guideline text; includes indications, contraindications, and off-label uses. Supports multimodal analyses and has a continual learning variant (PrimeKG-CL) with temporal snapshots.  
+Access: Harvard Dataverse / https://github.com/mims-harvard/PrimeKG  
+
+***
+__Hetionet__  
+~47k nodes and 2.25M edges from 29 databases. Foundational heterogeneous biomedical network widely used for drug repurposing.  
+Access: https://het.io / GitHub  
+
+***
+__BioKG / DRKG / OREGANO / PharMeBINet / Know2BIO__  
+Large-scale integrative KGs (millions of nodes/edges) covering drugs, proteins, diseases, pathways, and more. Useful for scale and diversity in KG completion and drug-repurposing tasks.  
+
+***
+__Clinical Trials Knowledge Graph (Samyama et al.)__  
+~7.8M nodes and 27M edges built from ClinicalTrials.gov + MeSH + RxNorm + OpenFDA + PubMed. Real-world clinical trial scale KG.  
+
+***
+__ChronoMedKG (2026)__  
+~460k evidence-linked temporal triples covering 13k+ diseases with onset/progression grounding. Includes ChronoTQA benchmark for temporal clinical reasoning.  
+
+***
+
+#### RDF-Specific Benchmarking Datasets
+__RDF Reification Benchmark (REF) using Biomedical Knowledge Repository (BKR)__  
+Three RDF versions (classic Reification, Singleton Property, RDF-star) of the Biomedical Knowledge Repository KG in Turtle / Turtle* format, plus SPARQL/SPARQL* queries for comparing triplestore performance and statement-level metadata modeling.  
+Access: Zenodo (https://zenodo.org/records/4148888)  
+
+***
+__LargeRDFBench__  
+Billion-triple SPARQL endpoint federation benchmark with 13 real interconnected datasets (including Linked TCGA cancer genomics, ChEBI, DrugBank, KEGG, Affymetrix, and others). Contains simple, complex, and large queries for realistic biomedical SPARQL federation evaluation.  
+Access: https://github.com/dice-group/LargeRDFBench  
+
+***
+__kgbench__  
+Collection of RDF-encoded knowledge graphs for node classification (relational and multimodal). Provides large labeled test/validation sets and both pure RDF and pre-processed formats.  
+Access: peterbloem.nl / associated ESWC publication  
+
+***
+__Linked TCGA / ChEBI / other life-science Linked Data sets (within LargeRDFBench and related)__  
+RDF versions of cancer genomics, chemical entities, and related biomedical resources used for SPARQL and federation benchmarking.  
+
+***
+
 ## 4. National Healthcare Data  
 __Centers for Disease Control and Prevention (CDC)__  
 Data from the CDC on many areas, including:  
