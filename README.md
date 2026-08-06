@@ -577,6 +577,117 @@ RDF versions of cancer genomics, chemical entities, and related biomedical resou
 
 ***
 
+### Patient Acuity Scores, ML Benchmarking Metrics & Agentic AI Benchmarks
+
+Resources related to hospital patient acuity / risk scoring, standard machine learning evaluation metrics used in clinical AI, and emerging agentic AI benchmarks with associated datasets.
+
+**Possible tasks:**
+- Identifying high-vulnerability / high-risk patients for triage, staffing, and clinical escalation
+- Standard accuracy and calibration evaluation of clinical ML and NLP models
+- Benchmarking autonomous / agentic systems on multi-step reasoning, tool use, and reliability
+
+#### Patient Acuity & Early Warning Scores
+__NEWS / NEWS2 (National Early Warning Score)__  
+Most widely adopted general-ward early warning score based on vital signs. Used to detect clinical deterioration.
+
+***
+__MEWS (Modified Early Warning Score)__  
+Classic early warning system for identifying at-risk hospitalized patients.
+
+***
+__qSOFA / SOFA (Sequential Organ Failure Assessment)__  
+Sepsis and organ-failure severity scoring. qSOFA is the simplified bedside version.
+
+***
+__APACHE II / III / IV__  
+Acute Physiology and Chronic Health Evaluation – standard ICU mortality prediction scores.
+
+***
+__SAPS (Simplified Acute Physiology Score)__  
+ICU severity-of-illness score.
+
+***
+__Patient Acuity Rating (PAR)__  
+7-point Likert scale used by clinicians to quantify likelihood of cardiac arrest or ICU transfer within 24 hours.
+
+***
+__HAVEN__  
+Machine-learning based hospital acuity and vulnerability early notification model that outperforms traditional early warning scores.
+
+***
+__ACE Risk Score (Acute Care for Elders)__  
+ML-based risk score integrating Clinical Frailty Scale with lab and clinical data for high-risk older inpatients.
+
+***
+__CoVA (COVID Acuity Score)__  
+Outpatient screening score that predicts COVID-19 related hospitalization, critical illness, and death.
+
+***
+__Nursing Acuity Scales (1–5 levels)__  
+Unit-specific models used to determine nurse:patient ratios based on patient complexity and care intensity.
+
+***
+
+#### Standard ML / Clinical AI Evaluation Metrics
+Common metrics used when benchmarking machine learning and clinical NLP models:
+
+- Classification: Accuracy, Precision, Recall, F1-score (exact and relaxed match), Specificity, Sensitivity, PPV, NPV
+- Discrimination: AUROC (AUC), AUPRC
+- Calibration: Brier score, Expected Calibration Error
+- NLP-specific: Entity-level F1, Span F1, Relation F1
+- Ranking / Linking: Mean Reciprocal Rank (MRR), Hits@K
+- Agreement: Cohen’s Kappa, Inter-Annotator Agreement (IAA)
+
+***
+
+#### Agentic AI Benchmarks & Associated Datasets
+Benchmarks that measure agent success rates, multi-step tool use, reasoning reliability, and safety:
+
+__AgentBench__  
+Multi-environment evaluation of LLM agents (OS, databases, knowledge graphs, games, etc.).
+
+***
+__τ-bench / τ²-bench__  
+Tool-using agents evaluated in realistic service domains (airline, retail, telecom, banking). Strong focus on stateful multi-turn interactions.
+
+***
+__BrowseComp__  
+Web-browsing agent benchmark.
+
+***
+__SWE-bench (Verified)__  
+Software engineering agents that must resolve real GitHub issues.
+
+***
+__MultiAgentBench__  
+Evaluation of multi-agent collaboration and coordination.
+
+***
+__Agent-SafetyBench__  
+Safety-critical agent behavior and failure modes.
+
+***
+__KAMI (Kamiwaza Agentic Merit Index)__  
+Open-model focused agentic accuracy benchmark.
+
+***
+__AA Agentic Index__  
+Enterprise-oriented agentic leaderboard.
+
+***
+__MADQA__  
+Multimodal agentic document question-answering benchmark (accuracy + computational cost).
+
+***
+__HANDBOOK.md__  
+Long-context agentic instruction-following and policy adherence benchmark.
+
+***
+__WebArena, GAIA, AppWorld__  
+Broader agentic task suites covering web navigation, general assistance, and application environments.
+
+***
+
 ## 4. National Healthcare Data  
 __Centers for Disease Control and Prevention (CDC)__  
 Data from the CDC on many areas, including:  
