@@ -421,6 +421,76 @@ Embeddings:  https://figshare.com/s/00d69861786cd0156d81
 Interactive tool: http://cui2vec.dbmi.hms.harvard.edu  
 ***
 
+### Clinical Named Entity Recognition (NER) & Concept Normalization / Entity Linking
+
+These datasets support extraction and semantic linking of clinical entities (medications, labs/tests, allergies, symptoms/problems, procedures, ADEs, etc.) from clinical notes and biomedical text. They are particularly useful for post-OCR processing of outside medical records, information extraction pipelines, and knowledge base population.
+
+**Possible tasks these datasets can be used for:**
+- Named Entity Recognition (NER) of medications, symptoms, labs, allergies, problems, treatments, and ADEs
+- Concept Normalization / Entity Linking / Medical Concept Normalization (mapping mentions to UMLS, SNOMED CT, RxNorm, MeSH, MedDRA, LOINC, etc.)
+- Joint NER + Linking (end-to-end information extraction)
+- Relation Extraction (e.g., drug–ADE, drug–indication, problem–treatment)
+- Cascade / multi-model routing evaluation for cost-efficient clinical IE
+- Ontology grounding and hierarchical evaluation
+- Domain adaptation and multi-institutional generalization testing
+- Benchmarking of clinical LLMs, SpaCy clinical models, OntoGPT-style systems, and hybrid extractors
+
+__n2c2 2018 Track 2 (ADE & Medication Extraction)__  
+505 MIMIC-III discharge summaries annotated for medications (Drug, Strength, Dosage, Duration, Frequency, Form, Route), ADE, and Reason. Supports concept extraction, relation classification, and end-to-end systems. Highly relevant for medication and allergy/ADE extraction from clinical notes.  
+Access: Requires n2c2 / Harvard DBMI data use agreement (https://n2c2.dbmi.hms.harvard.edu/)  
+
+***
+__n2c2 2019 Clinical Concept Normalization (MCN)__  
+100 clinical discharge summaries (from 2010 i2b2/VA) with problem, treatment, and test mentions normalized to UMLS concepts (SNOMED CT + RxNorm subset). Core clinical entity linking benchmark.  
+Access: n2c2 portal (requires DUA)  
+
+***
+__MADE 1.0 (Medication and Adverse Drug Events)__  
+~1,089 EHR notes from cancer patients annotated for Drug, Dosage, Route, Duration, Frequency, Indication, ADE, Severity, and SSLIF (signs/symptoms/diseases). Strong for medication + ADE + symptom extraction.  
+Access: Request-based via the MADE challenge organizers  
+
+***
+__i2b2 2010 Concepts, Assertions & Relations__  
+Multi-site clinical notes annotated for Problem, Treatment, and Test concepts plus assertions (negation, etc.) and relations. Classic foundation for clinical NER and relation extraction.  
+Access: n2c2 / i2b2 portal  
+
+***
+__MedMentions (Full & ST21pv)__  
+4,392 PubMed abstracts with ~352k (Full) / ~203k (ST21pv) mentions linked to UMLS. Largest and most widely used general biomedical entity linking benchmark. ST21pv is a higher-quality subset focused on preferred semantic types.  
+Access: https://github.com/chanzuckerberg/MedMentions  
+
+***
+__BC5CDR__  
+1,500 PubMed abstracts annotated for Chemical and Disease entities (with MeSH identifiers). Standard benchmark for chemical and disease NER + linking.  
+Access: https://biocreative.bioinformatics.udel.edu/tasks/biocreative-v/track-3-cdr/  
+
+***
+__NCBI Disease__  
+~793 PubMed abstracts with disease mentions normalized to MEDIC (MeSH + OMIM). Classic disease concept normalization dataset.  
+Access: https://www.ncbi.nlm.nih.gov/CBBresearch/Dogan/DISEASE/  
+
+***
+__ShARe/CLEF 2013__  
+Clinical notes with disorder mentions linked to UMLS. Foundational clinical disorder linking resource.  
+Access: PhysioNet / shared task archives (DUA required)  
+
+***
+__BELB (Biomedical Entity Linking Benchmark)__  
+Unified benchmark providing 11 corpora linked to 7 knowledge bases, covering gene, disease, chemical, species, cell line, and variant. Enables standardized multi-entity-type evaluation.  
+Paper / Access: Search for "BELB biomedical entity linking benchmark" (2023)  
+
+***
+__MedPath (2025)__  
+Harmonized multi-domain resource (~512k mentions) built from 9 expert-annotated datasets. All entities normalized to latest UMLS with mappings to 62 vocabularies and full ontological paths (hierarchical evaluation support). Covers clinical notes, literature, drug labels, and social media.  
+Paper: arXiv search for MedPath 2025  
+
+***
+__SNOMED CT Entity Linking (MIMIC-IV based)__  
+Real MIMIC-IV discharge notes annotated with SNOMED CT concepts (Findings, Procedures, Body Structures, etc.). One of the largest public clinical notes entity linking datasets (~74k annotations).  
+Access: PhysioNet (credentialed access)  
+
+***
+
 ## 4. National Healthcare Data  
 __Centers for Disease Control and Prevention (CDC)__  
 Data from the CDC on many areas, including:  
