@@ -29,26 +29,14 @@ A curated catalog of datasets, corpora, benchmarks, and public data resources fo
 
 ## Biomedical NLP at a glance
 
-```text
-Clinical / Biomedical Text
-          │
-          ▼
-        NER
-          │
-          ▼
- Entity Normalization
-          │
-          ▼
- Relation Extraction
-          │
-          ▼
- Knowledge / Triple Extraction
-          │
-          ▼
-  Knowledge Graph / Retrieval
-          │
-          ▼
- QA · Reasoning · Validation
+```mermaid
+flowchart TD
+  A[Clinical / Biomedical Text] --> B[NER]
+  B --> C[Entity Normalization]
+  C --> D[Relation Extraction]
+  D --> E[Knowledge / Triple Extraction]
+  E --> F[Knowledge Graph / Retrieval]
+  F --> G[QA · Reasoning · Validation]
 ```
 
 Clinical NLP and biomedical-literature NLP overlap, but they are not identical. Clinical datasets commonly contain EHR notes, discharge summaries, medications, tests, problems, PHI, temporal expressions, and procedures. Biomedical corpora commonly use PubMed/PMC and annotate diseases, chemicals, genes/proteins, species, variants, cell lines, and relations.
@@ -85,5 +73,5 @@ Dataset entries also use lightweight metadata such as:
 - [Migration / preservation note](archive/README.md)
 
 ---
-
+#Dis
 This repository is provided for informational and research-discovery purposes only. Dataset descriptions can become stale; the authoritative source is always the dataset owner or challenge organizer.
