@@ -76,12 +76,33 @@ BioASQ has hosted multiple entity-recognition and normalization tasks, including
 
 ## PHI / de-identification datasets
 
-Clinical PHI extraction is normally benchmarked on access-controlled corpora because of the sensitivity of source notes.
+Clinical PHI extraction is normally benchmarked on access-controlled corpora because of the sensitivity of source notes. When navigating clinical NLP datasets, the landscape is commonly split between fully open resources and collections requiring a Data Use Agreement (DUA) due to privacy regulations (e.g., HIPAA).
 
-- i2b2 2006 de-identification
-- i2b2/UTHealth 2014 de-identification and heart-disease risk factors
-- other n2c2 de-identification challenge corpora
+### Category 1: Open Source & Freely Available (No Restrictions)
+These datasets are synthetic, openly licensed, or otherwise available without institutional credentialing — suitable for benchmarking and experimentation without a DUA.
 
-See [n2c2 / i2b2](../../benchmarks/n2c2-i2b2.md).
+- **ASQ-PHI** (MIT License): a 2026 synthetic benchmark on Mendeley Data featuring adversarial single-turn clinical queries mapped to HIPAA Safe Harbor categories, designed to test over-redaction. Access: https://data.mendeley.com/datasets/csz5dzp7nx/1 `task:de-identification` `access:open` `license:mit` `synthetic`
+- **MedAlign & FactEHR** (Non-Commercial Open): longitudinal clinical-data models for medical-NLP development (`access:open-noncommercial`).
+- **Synthetic EHR corpora (Hugging Face / GitHub)**: community-generated synthetic clinical text collections that contain no real-patient footprint (`access:open` `synthetic`).
 
-> Do not redistribute n2c2/i2b2 data files. Each approved user must obtain them through the designated portal under the applicable DUA.
+### Category 2: Restricted Access via Data Use Agreement (DUA)
+These collections contain authentic clinical notes and require credentialing, human-subjects training (e.g., CITI), and a signed DUA preventing re-identification or public redistribution.
+
+- **n2c2 / i2b2 de-identification corpora** — Gold-standard PHI-annotated discharge summaries and clinical notes. Access and registration: https://n2c2.dbmi.hms.harvard.edu/data-sets `task:de-identification` `access:dua`
+- **MIMIC-III / MIMIC-IV** — Large-scale ICU notes, radiology impressions and clinical events. Credentialing and DUA required via PhysioNet: https://physionet.org/ `task:de-identification` `access:dua`
+- **CARMEN-I** — Multilingual clinical benchmark (Spanish/Catalan) with PHI annotations. Access: PhysioNet (credentialed) `task:de-identification` `access:dua`
+
+> Do not redistribute DUA-protected data. Obtain files only via the official portals and comply with the data-use terms.
+
+### Open-source tools to benchmark de-identification
+Use these tools to evaluate de-identification strategies on synthetic corpora or (internally) on DUA-protected test sets after approval.
+
+- **CliniDeID** — open-source ensemble de-identification (GPL3) combining model-based and rule-based taggers.
+- **Philter** — a clinical-text de-identification pipeline targeting common PHI patterns and MongoDB text exports.
+- **MIST (MITRE Identity Scrubber Toolkit)** — historically popular for fast i2b2-style evaluation loops.
+
+### Evaluation & practical notes
+- For PhysioNet credentialing, verify the required CITI modules and institutional affiliation as part of the sign-up process (see PhysioNet/website). `access:dua`
+- Example integrations: a Python script can map i2b2 annotation tags to spaCy or Hugging Face NER formats for training/evaluation; evaluation scripts can measure both recall on PHI categories and over-redaction rates (false positive removal of clinical identifiers).
+
+See the n2c2 / i2b2 overview for challenge archives and access details: ../../benchmarks/n2c2-i2b2.md
