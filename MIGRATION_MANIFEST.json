@@ -1,0 +1,32 @@
+{
+  "package": "medical-data-restructured",
+  "purpose": "Push-ready README/catalog restructuring for YPCC/medical-data",
+  "target_branch_base": "master",
+  "recommended_branch": "agent/restructure-medical-data-catalog",
+  "files": [
+    "CONTRIBUTING.md",
+    "README.md",
+    "archive/README.md",
+    "benchmarks/README.md",
+    "benchmarks/bioasq.md",
+    "benchmarks/evaluation-agentic.md",
+    "benchmarks/imaging-challenges.md",
+    "benchmarks/n2c2-i2b2.md",
+    "benchmarks/trec.md",
+    "datasets/README.md",
+    "datasets/biomedical-literature.md",
+    "datasets/biomedical-nlp/README.md",
+    "datasets/biomedical-nlp/entity-linking-normalization.md",
+    "datasets/biomedical-nlp/knowledge-extraction.md",
+    "datasets/biomedical-nlp/named-entity-recognition.md",
+    "datasets/clinical-ehr.md",
+    "datasets/medical-imaging.md",
+    "datasets/medical-speech.md",
+    "datasets/national-healthcare.md",
+    "datasets/uci-medical.md"
+  ],
+  "validation": {
+    "local_markdown_links_broken": [],
+    "file_count": 20
+  }
+}
