@@ -21,6 +21,7 @@ A curated catalog of datasets, corpora, benchmarks, and public data resources fo
 | Medical speech | [Medical Speech](datasets/medical-speech.md) |
 | Classic tabular medical ML datasets | [UCI Medical Datasets](datasets/uci-medical.md) |
 | Medical-AI challenges and competitions | [Challenges & Benchmarks](benchmarks/README.md) |
+| Medical LLM / GenAI evaluation (knowledge, reasoning, safety, agentic, multimodal, equity) | [Medical LLM Benchmarks](benchmarks/medical-llm-benchmarks.md) |
 | Patient acuity, ML metrics, agentic-AI evaluation | [Evaluation & Agentic Benchmarks](benchmarks/evaluation-agentic.md) |
 
 ## Browse by modality
@@ -58,7 +59,7 @@ Clinical NLP and biomedical-literature NLP overlap, but they are not identical. 
 
 GitHub repository search works well once the catalog is split into topic files. Useful search terms include:
 
-`NER` · `SNOMED` · `RxNorm` · `MIMIC` · `MRI` · `relation extraction` · `knowledge graph` · `BioASQ` · `access:open`
+`NER` · `SNOMED` · `RxNorm` · `MIMIC` · `MRI` · `relation extraction` · `knowledge graph` · `BioASQ` · `access:open` · `medical-llm`
 
 Dataset entries also use lightweight metadata such as:
 
@@ -73,5 +74,5 @@ Dataset entries also use lightweight metadata such as:
 - [Migration / preservation note](archive/README.md)
 
 ---
-#Dis
+# Disclaimer
 This repository is provided for informational and research-discovery purposes only. Dataset descriptions can become stale; the authoritative source is always the dataset owner or challenge organizer.
